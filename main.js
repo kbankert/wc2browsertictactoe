@@ -11,7 +11,7 @@ angular.module("TicTac", ["firebase"])
  .controller("TicTacCtrl", function($scope, $firebase){
 
 
- 	ticTacRef = new Firebase("https://basicp2tictac.firebaseio.com");
+ 	ticTacRef = new Firebase("https://wc2browsertictactoe.firebaseio.com");
  	$scope.fbRoot = $firebase(ticTacRef);
 
  	$scope.fbRoot.$on("loaded", function() {
