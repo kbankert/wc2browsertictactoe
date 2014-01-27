@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+</head>
+
+<body>
+	<h1>World Cup Tic Tac Toe</h1>
+	<h2>Brazil vs Argentina</h2>
+	<div id="mainfield">
+		<div id="board">
+			<div x-ng-app="TicTac" x-ng-controller="TicTacCtrl" x-ng-init="celebrate()">
+				 <div x-ng-repeat="x in obj.board track by $index"
+                  x-ng-class="{clear:$index % 3 == 0, cell:true}"
+                  x-ng-click="makePass($index); celebrate()"
+                  id="board{{$index}}"
+                  >{{x}}</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

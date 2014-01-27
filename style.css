@@ -1,0 +1,108 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	background-image:url('img/background.jpg');
+	background-repeat: no-repeat;
+  	background-size: cover;
+  	font-family: "Century Gothic", sans-serif;
+  	text-align: center;
+}
+
+h1 {
+	color: green;
+	font-size: 48px;
+	padding-top : 25px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h2 {
+	color: blue;
+	font-size: 36px;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#mainfield {
+  position: relative;
+  margin:0 auto;      
+  width: 600px;
+  height: 399px;          
+  border: 3px solid yellow; 
+  background: url("img/field.jpg");
+}
+
+#board {
+  position: absolute;
+  top: 12px;
+  left: 115px;
+}
+
+.cell {
+	width:120px;
+	height:120px;
+	float:left;
+	color: white;
+	opacity: 0.9;
+	text-align: center;
+	padding: 15px;
+	font-size: 74px;
+}
+
+.cell:hover {
+	background-color: blue;
+	opacity: .25;
+}
+
+.clear {
+	clear:both;
+}
+
+#board0 {
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+#board1 {
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+}
+
+#board2 {
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+}
+#board3 {
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;  
+  border-top: 2px solid white;
+}
+#board4 {
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+#board5 {
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+
+#board6 {
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+}
+#board7 {
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+#board8 {
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+
