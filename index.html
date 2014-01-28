@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+<!-- References to Firebase, AngularFire, AngularJS Frameworks -->
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
@@ -16,12 +17,20 @@
 	<h2>Brazil vs Argentina</h2>
 	<div id="mainfield">
 		<div id="board">
+
+			<!-- Create new app and main controller because using Firebase
+			 		Unsure if we need to initialize celebrate()
+			 		Repeat creates our board for us
+			 		Clear allows us to force the board into a three by three
+			 		And makePass is really where the game starts-->
 			<div x-ng-app="TicTac" x-ng-controller="TicTacCtrl" x-ng-init="celebrate()">
 				 <div x-ng-repeat="x in obj.board track by $index"
                   x-ng-class="{clear:$index % 3 == 0, cell:true}"
                   x-ng-click="makePass($index); celebrate()"
-                  id="board{{$index}}"
-                  >{{x}}</div>
+                  id="board{{$index}}">
+                  <!-- We use a bind to populate the cell with either a "B" or an "A"-->
+                  {{x}}
+              	 </div>
 			</div>
 		</div>
 	</div>
